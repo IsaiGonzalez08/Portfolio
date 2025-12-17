@@ -3,11 +3,15 @@
 :root {
   --background: #ffffff;
   --foreground: #2E2E2E;
+  --secondary: #979797;
+  --snow-white: #EFEFEF;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-secondary: var(--secondary);
+  --color-snow-white: var(--snow-white);
   --font-montserrat: var(--font-montserrat);
 }
 

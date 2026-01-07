@@ -46,19 +46,19 @@ const ExperienceSection = () => {
     ]
 
     return (
-        <section id="experience" className="px-24">
-            <h1 className="text-foreground font-bold text-6xl">Experience</h1>
-            <div className="flex flex-col mt-16 gap-14">
+        <section id="experience" className="mt-14 px-5">
+            <h1 className="text-foreground font-bold text-4xl">Experience</h1>
+            <div className="flex flex-col gap-14 mt-5">
                 {listCompanies.map((company, index) =>
-                    <div key={index} className="flex flex-row justify-between items-center w-full border-b-2 border-secondary pb-4 hover:scale-105 hover:duration-600 transition-all">
-                        <div className="flex flex-col gap-4 w-2/5">
-                            <h2 className="text-foreground text-2xl">{company.role}, {company.name}</h2>
+                    <div key={index} className="flex flex-col gap-4">
+                        <div className="flex flex-col gap-4">
                             <ul className="list-disc list-inside">
-                                <li className="text-secondary">{company.date}</li>
+                                <li className="text-foreground text-2xl">{company.role}, {company.name}</li>
                             </ul>
+                            <p className="text-secondary">{company.date}</p>
                         </div>
-                        <p className="w-2/5 text-secondary">{company.description}</p>
-                        <div className="flex flex-row justify-end gap-4 w-1/5">
+                        <p className="text-secondary">{company.description}</p>
+                        <div className="flex flex-row gap-4">
                             {company.tags.map((item, index) =>
                                 <div key={index} className="border-2 text-secondary border-secondary rounded-4xl px-4 py-2">
                                     {item.type}

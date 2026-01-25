@@ -2,7 +2,7 @@ import { listCompanies } from "../data"
 
 const ExperienceSection = () => {
     return (
-        <section id="experience" className="mt-14 px-5">
+        <section id="experience" className="mt-14 px-5 sm:px-10">
             <h1 className="text-foreground font-bold text-4xl">Experience</h1>
             <div className="flex flex-col gap-14 mt-5">
                 {listCompanies.map((company, index) =>

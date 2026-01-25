@@ -9,35 +9,41 @@ import Link from "next/link";
 export const LandingPage = () => {
   return (
     <>
-      <Header />
-      <main className="flex flex-col items-center w-full mt-14 px-5">
-        <h1 className="text-3xl">Hello!, <span className="font-semibold">I'm Gerardo</span></h1>
-        <div className="flex flex-row items-center gap-2">
-          <div className="w-12 h-px bg-foreground"></div>
-          <span className="text-base font-medium">Front-end Developer</span>
-        </div>
-        <p className="text-4xl font-medium mt-2 text-center leading-12">Experience in design, installation, and maintenance of software.</p>
-
-        <button className="cursor-pointer mt-6 flex flex-row items-center font-semibold justify-center py-3 w-full bg-foreground text-white rounded-4xl hover:bg-secondary transition-colors">
-          GET IN TOUCH
-        </button>
-
-
-        <div className="flex items-center w-full gap-4 mt-14">
-          <div className="w-20 h-px bg-foreground"></div>
-          {listIcons.map((item, index) => (
-            <Link href={item.href} key={index}>
-              <Image
-                src={item.icon}
-                alt={item.name}
-                width={30}
-                height={30}
-                className="w-auto h-8"
-              />
-            </Link>
-          ))}
-        </div>
-      </main>
+      <div className="h-dvh">
+        <Header />
+        <main className="flex h-full flex-col justify-center items-center w-full px-5 sm:px-14">
+          <div className="flex flex-col w-2/3 justify-center items-center">
+            <h1 className="text-3xl sm:text-5xl">Hello!, <span className="font-semibold">I'm Gerardo</span></h1>
+            <div className="flex flex-row items-center gap-2 sm:mt-2">
+              <div className="w-12 h-px bg-foreground sm:w-24"></div>
+              <span className="text-base font-medium sm:text-2xl">Full Stack Developer</span>
+            </div>
+            <p className="text-4xl font-medium mt-2 text-center leading-12 sm:font-light sm:text-2xl">Experience in design, installation, and maintenance of software.</p>
+            <div className="flex flex-row gap-4 w-2/3 mt-4">
+              <button className="cursor-pointer flex flex-row items-center font-semibold justify-center py-3 w-full border border-foreground bg-foreground text-white rounded-4xl hover:bg-secondary hover:border-secondary transition-colors">
+                Get in touch
+              </button>
+              <button className="cursor-pointer flex flex-row items-center font-semibold justify-center py-3 w-full border border-foreground bg-white text-foreground rounded-4xl hover:bg-secondary hover:text-white hover:border-secondary transition-colors">
+                Download CV
+              </button>
+            </div>
+            <div className="flex items-center w-full gap-4 mt-14">
+              <div className="w-20 h-px bg-foreground"></div>
+              {listIcons.map((item, index) => (
+                <Link href={item.href} key={index}>
+                  <Image
+                    src={item.icon}
+                    alt={item.name}
+                    width={30}
+                    height={30}
+                    className="w-auto h-8"
+                  />
+                </Link>
+              ))}
+            </div>
+          </div>
+        </main>
+      </div>
       <ExperienceSection />
       <WorkSection />
       <Footer />

@@ -19,7 +19,8 @@
       }
     ],
     "paths": {
-      "@/components/*": ["components/*"]
+      "@/components/*": ["components/*"],
+      "@/features/*": ["features/*"]
     },
     "baseUrl": "src/"
   },

@@ -1,6 +1,6 @@
+import { WorkCard as WorkCardType } from "@/features/landing/domain/types";
+import { Chip } from "@/components/ui/Chip";
 import Image from "next/image";
-import { WorkCard as WorkCardType } from "../../types";
-import { Chip } from "../ui/Chip";
 
 export const WorkCard = ({ bgColor, workCard }: { bgColor?: string, workCard: WorkCardType }) => {
     return (

@@ -1,4 +1,4 @@
-import { cardItem, companyItem, iconItem } from "@/features/landing/domain/types";
+import { companyItem, iconItem, WorkCard } from "@/features/landing/domain/types";
 
 export const listIcons = [
     { name: "LinkedIn", icon: "/icons/Linkedin.svg", href: "#" },
@@ -66,4 +66,4 @@ export const wordCardsList = [
         year: "2023",
         images: ["/icons/mainCoin.png"]
     }
-] as cardItem[];
+] as WorkCard[]; 

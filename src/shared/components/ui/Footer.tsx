@@ -37,20 +37,20 @@ export const Footer = () => {
     ]
 
     return (
-        <footer className="w-full flex flex-col border-t border-secondary rounded-4xl p-5">
-            <div className="flex flex-col w-full gap-5">
+        <footer className="w-full flex flex-col border-t border-secondary rounded-4xl p-5 sm:p-10">
+            <div className="flex flex-col sm:flex-row w-full gap-5">
                 <div className="flex flex-row items-center gap-5">
                     <Image src="/icons/logo.svg" alt="logo" width={40} height={40} />
-                    <p className="text-secondary text-sm">Developer with experience in the design, installation, and maintenance of software.</p>
+                    <p className="text-secondary text-sm">Developer with 3 years of experience in the design, installation, and maintenance of software systems.</p>
                 </div>
-                <div className="flex flex-row gap-10 w-full">
+                <div className="flex flex-row justify-center sm:justify-start gap-10 w-full">
                     {footerSections.map((section, index) =>
                         <div key={index} className="flex flex-col">
-                            <h1 className="uppercase text-secondary font-semibold mb-4">{section.title}</h1>
-                            <div className="flex flex-col">
-                            {section.items.map((item, index) =>
-                                <Link className="text-secondary text-sm" key={index} href={item.url}>{item.name}</Link>
-                            )}
+                            <h1 className="uppercase text-secondary font-semibold mb-2">{section.title}</h1>
+                            <div className="flex flex-col gap-2">
+                                {section.items.map((item, index) =>
+                                    <Link className="text-secondary text-sm" key={index} href={item.url}>{item.name}</Link>
+                                )}
                             </div>
                         </div>
                     )}

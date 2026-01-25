@@ -4,14 +4,6 @@ export interface iconItem {
     href: string;
 }
 
-export interface WorkCard {
-    type: string
-    projectName: string
-    description: string
-    year: string
-    images: string[]
-}
-
 export interface companyItem {
     name: string
     role: string
@@ -22,7 +14,7 @@ export interface companyItem {
     }[]
 }
 
-export interface cardItem {
+export interface WorkCard {
     type: string
     projectName: string
     description: string

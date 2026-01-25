@@ -10,8 +10,8 @@ export const WorkSection = () => {
     ];
 
     return (
-        <section id="work" className="mt-14 px-5 sm:px-10">
-            <h1 className="text-foreground font-bold text-4xl">Selected work</h1>
+        <section id="work" className="mt-32 px-5 sm:px-10 lg:px-14">
+            <h1 className="text-foreground font-bold text-4xl sm:text-5xl">Selected work</h1>
             <div className="flex flex-col gap-10">
                 {wordCardsList.map((card, index) =>
                     <WorkCard

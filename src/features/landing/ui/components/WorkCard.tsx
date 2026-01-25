@@ -1,5 +1,5 @@
 import { WorkCard as WorkCardType } from "@/features/landing/domain/types";
-import { Chip } from "@/components/ui/Chip";
+import { Chip } from "shared/components/ui/Chip";
 import Image from "next/image";
 
 export const WorkCard = ({ bgColor, workCard }: { bgColor?: string, workCard: WorkCardType }) => {

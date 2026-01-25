@@ -1,3 +1,6 @@
+"use client"
+
+import { motion } from "framer-motion";
 import { listIcons } from "./data";
 import Header from "shared/components/ui/Header";
 import ExperienceSection from "features/landing/ui/components/ExperienceSection";
@@ -12,7 +15,11 @@ export const LandingPage = () => {
       <div className="h-dvh py-10">
         <Header />
         <main className="flex h-full flex-col justify-center items-center w-full px-5 sm:px-10 lg:px-14">
-          <div className="flex flex-col w-full lg:w-2/3 justify-center items-center">
+          <motion.div
+            initial={{ opacity: 0, x: -100 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.3, delay: 0.35, ease: "easeOut" }}
+            className="flex flex-col w-full lg:w-2/3 justify-center items-center">
             <h1 className="text-3xl sm:text-5xl">Hello!, <span className="font-semibold">I'm Gerardo</span></h1>
             <div className="flex flex-row items-center gap-2 sm:mt-2">
               <div className="w-12 h-px bg-foreground sm:w-24"></div>
@@ -41,7 +48,7 @@ export const LandingPage = () => {
                 </Link>
               ))}
             </div>
-          </div>
+          </motion.div>
         </main>
       </div>
       <ExperienceSection />

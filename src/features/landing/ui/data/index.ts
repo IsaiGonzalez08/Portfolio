@@ -1,0 +1,69 @@
+import { cardItem, companyItem, iconItem } from "@/features/landing/domain/types";
+
+export const listIcons = [
+    { name: "LinkedIn", icon: "/icons/Linkedin.svg", href: "#" },
+    { name: "GitHub", icon: "/icons/Github.svg", href: "#" },
+    { name: "Dribbble", icon: "/icons/Dribbble.svg", href: "#" },
+] as iconItem[];
+
+export const listCompanies = [
+    {
+        name: "Pixzelle Studio",
+        role: "Front-end Developer",
+        date: "August 2023 - Currently",
+        description: "Development of interactive web pages using frameworks such as Vue, Svelte and Next.js and maintenance of cross-platform applications with Flutter.",
+        tags: [
+            {
+                type: "Web"
+            },
+            {
+                type: "Mobile"
+            }
+        ]
+    },
+    {
+        name: "Vara Network",
+        role: "Web Developer",
+        date: "January/2023 - April/2023",
+        description: "Leading front-end website development and involved in website design.",
+        tags: [
+            {
+                type: "Web"
+            },
+            {
+                type: "UX/UI"
+            }
+        ]
+    },
+    {
+        name: "Dsoft",
+        role: "Intership Web Developer",
+        date: "April/2022 - August/2022",
+        description: "Participation in web development implementation of new features in internal projects and troubleshooting in production systems.",
+        tags: [
+            {
+                type: "Web"
+            },
+            {
+                type: "UX/UI"
+            }
+        ]
+    }
+] as companyItem[];
+
+export const wordCardsList = [
+    {
+        type: "Web Development",
+        projectName: "AquaQA",
+        description: "Website to monitor water quality using an IoT.",
+        year: "2025",
+        images: ["/icons/aquaQA.png"]
+    },
+    {
+        type: "Web Development",
+        projectName: "MainCoin",
+        description: "Application that gives information about public transport service.",
+        year: "2023",
+        images: ["/icons/mainCoin.png"]
+    }
+] as cardItem[];

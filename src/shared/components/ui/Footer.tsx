@@ -30,7 +30,7 @@ export const Footer = () => {
                 },
                 {
                     name: "LinkedIn",
-                    url: ""
+                    url: "https://www.linkedin.com/in/gerardo-isa%C3%AD-gonz%C3%A1lez-ruiz-b02b6b224/"
                 }
             ]
         }

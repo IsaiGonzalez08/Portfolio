@@ -23,9 +23,9 @@ export const LandingPage = () => {
             <h1 className="text-3xl sm:text-5xl">Hello!, <span className="font-semibold">I'm Gerardo</span></h1>
             <div className="flex flex-row items-center gap-2 sm:mt-2">
               <div className="w-12 h-px bg-foreground sm:w-24"></div>
-              <span className="text-base font-medium sm:text-2xl">Full Stack Developer</span>
+              <span className="text-lg font-medium sm:text-2xl">Full Stack Developer</span>
             </div>
-            <p className="mt-2 text-center font-light text-xl">Experience in design, installation, and maintenance of software.</p>
+            <p className="mt-2 text-center font-light text-lg">Experience in design, installation, and maintenance of software.</p>
             <div className="flex flex-row gap-4 w-full sm:w-2/3 mt-4">
               <button className="cursor-pointer flex flex-row items-center font-semibold justify-center py-3 w-full border border-foreground bg-foreground text-white rounded-4xl hover:bg-secondary hover:border-secondary transition-colors">
                 Get in touch

@@ -26,7 +26,7 @@ export const WorkCard = ({ bgColor, workCard }: { bgColor?: string, workCard: Wo
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 0.5, delay: 0.5, ease: "easeOut" }}
                 viewport={{ once: true }}
-                className={`cursor-pointer w-full flex flex-row justify-center items-center rounded-4xl  ${bgColor}`}>
+                className={`cursor-pointer w-full flex flex-row justify-center items-center rounded-4xl p-10  ${bgColor}`}>
                 {workCard.images.map((imageSrc, index) => (
                     <Image key={index} className="rounded-4xl" src={imageSrc} alt={`${workCard.projectName}-${index}`} width={620} height={600} priority={index === 0} />
                 ))}

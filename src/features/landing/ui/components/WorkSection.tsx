@@ -6,8 +6,8 @@ export const WorkSection = () => {
 
     const backgroundColors = [
         "bg-gradient-to-br from-[#CDE9EB] to-[#E8F4F5]",
+        "bg-gradient-to-br from-[#8DA8C9] to-[#DFE6EF]",
         "bg-gradient-to-br from-[#6E71A8] to-[#272727]",
-        "bg-gradient-to-br from-[#8DA8C9] to-[#DFE6EF]"
     ];
 
     return (

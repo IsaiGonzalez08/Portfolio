@@ -57,7 +57,14 @@ export const wordCardsList = [
         projectName: "AquaQA",
         description: "Website to monitor water quality using an IoT.",
         year: "2025",
-        images: ["/icons/aquaQA.png"]
+        images: ["/gifts/aquaQA-demo.gif"]
+    },
+    {
+        type: "Mobile Application",
+        projectName: "RabbitGO",
+        description: "Application that gives information about public transport service with an interactive map.",
+        year: "2024",
+        images: ["/icons/rabbitgo-1.png", "/icons/rabbitgo-2.png", "/icons/rabbitgo-3.png"]
     },
     {
         type: "Web Development",

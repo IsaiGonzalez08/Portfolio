@@ -1,4 +1,4 @@
-import { cardItem, companyItem, iconItem } from "@/features/landing/domain/types";
+import { companyItem, iconItem, WorkCard } from "@/features/landing/domain/types";
 
 export const listIcons = [
     { name: "LinkedIn", icon: "/icons/Linkedin.svg", href: "#" },
@@ -51,13 +51,20 @@ export const listCompanies = [
     }
 ] as companyItem[];
 
-export const wordCardsList = [
+export const workCardsList = [
     {
         type: "Web Development",
         projectName: "AquaQA",
         description: "Website to monitor water quality using an IoT.",
         year: "2025",
-        images: ["/icons/aquaQA.png"]
+        images: ["/gifts/aquaQA-demo.gif"]
+    },
+    {
+        type: "Mobile Application",
+        projectName: "RabbitGO",
+        description: "Application that gives information about public transport service with an interactive map.",
+        year: "2024",
+        images: ["/icons/rabbitgo-1.png", "/icons/rabbitgo-2.png", "/icons/rabbitgo-3.png"]
     },
     {
         type: "Web Development",
@@ -66,4 +73,4 @@ export const wordCardsList = [
         year: "2023",
         images: ["/icons/mainCoin.png"]
     }
-] as cardItem[];
+] as WorkCard[]; 

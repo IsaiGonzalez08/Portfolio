@@ -1,8 +1,8 @@
 import { companyItem, iconItem, WorkCard } from "@/features/landing/domain/types";
 
 export const listIcons = [
-    { name: "LinkedIn", icon: "/icons/Linkedin.svg", href: "#" },
-    { name: "GitHub", icon: "/icons/Github.svg", href: "#" },
+    { name: "LinkedIn", icon: "/icons/LinkedIn.svg", href: "#" },
+    { name: "GitHub", icon: "/icons/GitHub.svg", href: "#" },
     { name: "Dribbble", icon: "/icons/Dribbble.svg", href: "#" },
 ] as iconItem[];
 

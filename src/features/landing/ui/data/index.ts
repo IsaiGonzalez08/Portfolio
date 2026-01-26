@@ -51,7 +51,7 @@ export const listCompanies = [
     }
 ] as companyItem[];
 
-export const wordCardsList = [
+export const workCardsList = [
     {
         type: "Web Development",
         projectName: "AquaQA",

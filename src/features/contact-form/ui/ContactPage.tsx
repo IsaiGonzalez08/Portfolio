@@ -1,16 +1,12 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Header from "shared/components/ui/Header";
 import Footer from "shared/components/ui/Footer";
-import Link from "next/link";
-import Image from "next/image";
 
 export const ContactPage = () => {
     return (
         <>
             <div className="min-h-dvh py-10">
-                <Header />
                 <main className="flex min-h-[calc(100dvh-120px)] flex-col justify-center items-center w-full px-5 sm:px-10 lg:px-14 pt-20">
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}

@@ -27,9 +27,9 @@ export const LandingPage = () => {
             </div>
             <p className="mt-2 text-center font-light text-lg">Experience in design, installation, and maintenance of software.</p>
             <div className="flex flex-row gap-4 w-full sm:w-2/3 mt-4">
-              <button className="cursor-pointer flex flex-row items-center font-semibold justify-center py-3 w-full border border-foreground bg-foreground text-white rounded-4xl hover:bg-secondary hover:border-secondary transition-colors">
+              <Link href="/contact-me" className="cursor-pointer flex flex-row items-center font-semibold justify-center py-3 w-full border border-foreground bg-foreground text-white rounded-4xl hover:bg-secondary hover:border-secondary transition-colors">
                 Get in touch
-              </button>
+              </Link>
               <button className="cursor-pointer flex flex-row items-center font-semibold justify-center py-3 w-full border border-foreground bg-white text-foreground rounded-4xl hover:bg-secondary hover:text-white hover:border-secondary transition-colors">
                 Download CV
               </button>

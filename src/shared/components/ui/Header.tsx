@@ -26,9 +26,9 @@ const Header = () => {
                     <Link href="/about" onClick={(e) => handleSmoothScroll(e, "experience")}>Experience</Link>
                     <Link href="/contact" onClick={(e) => handleSmoothScroll(e, "skills")}>Skills</Link>
                 </div>
-                <button className="bg-foreground font-medium hover:bg-secondary transition-colors cursor-pointer rounded-full text-white py-2 px-6">
+                <Link href="/about-me" className="bg-foreground font-medium hover:bg-secondary transition-colors cursor-pointer rounded-full text-white py-2 px-6">
                     About me
-                </button>
+                </Link>
             </motion.div>
         </header>
     )

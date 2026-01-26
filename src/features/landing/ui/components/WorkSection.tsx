@@ -1,6 +1,7 @@
-import { wordCardsList } from "../data";
+import { workCardsList } from "../data";
 import { motion } from "framer-motion";
 import WorkCard from "./WorkCard";
+import Link from "next/link";
 
 export const WorkSection = () => {
 
@@ -20,7 +21,7 @@ export const WorkSection = () => {
                 <h1 className="text-foreground font-bold text-4xl sm:text-5xl">Selected work</h1>
             </motion.div>
             <div className="flex flex-col gap-10">
-                {wordCardsList.map((card, index) =>
+                {workCardsList.map((card, index) =>
                     <WorkCard
                         key={index}
                         workCard={card}
@@ -35,9 +36,9 @@ export const WorkSection = () => {
                 transition={{ duration: 0.5, delay: 0.5, ease: "easeOut" }}
                 viewport={{ once: true }}
                 className="flex justify-center w-full">
-                <button className="cursor-pointer my-20 w-full sm:w-1/4 py-3 bg-foreground text-white rounded-4xl hover:bg-secondary transition-colors">
+                <Link href="/projects" className="text-center cursor-pointer my-20 w-full sm:w-1/4 py-3 bg-foreground text-white rounded-4xl hover:bg-secondary transition-colors">
                     See more
-                </button>
+                </Link>
             </motion.div>
         </section>
     )

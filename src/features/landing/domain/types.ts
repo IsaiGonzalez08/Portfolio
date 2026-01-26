@@ -15,6 +15,7 @@ export interface companyItem {
 }
 
 export interface WorkCard {
+    id: string
     type: string
     projectName: string
     description: string

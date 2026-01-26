@@ -53,6 +53,7 @@ export const listCompanies = [
 
 export const workCardsList = [
     {
+        id: "aquaqa",
         type: "Web Development",
         projectName: "AquaQA",
         description: "Website to monitor water quality using an IoT.",
@@ -60,6 +61,7 @@ export const workCardsList = [
         images: ["/gifts/aquaQA-demo.gif"]
     },
     {
+        id: "rabbitgo",
         type: "Mobile Application",
         projectName: "RabbitGO",
         description: "Application that gives information about public transport service with an interactive map.",
@@ -67,6 +69,7 @@ export const workCardsList = [
         images: ["/icons/rabbitgo-1.png", "/icons/rabbitgo-2.png", "/icons/rabbitgo-3.png"]
     },
     {
+        id: "maincoin",
         type: "Web Development",
         projectName: "MainCoin",
         description: "Application that gives information about public transport service.",

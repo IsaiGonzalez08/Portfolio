@@ -36,7 +36,7 @@ export const WorkSection = () => {
                 transition={{ duration: 0.5, delay: 0.2, ease: "easeOut" }}
                 viewport={{ once: true }}
                 className="flex justify-center w-full">
-                <Link href="/projects" className="text-center cursor-pointer my-20 w-full sm:w-1/4 py-3 bg-foreground text-white rounded-4xl hover:bg-secondary transition-colors">
+                <Link href="/projects" className="text-center cursor-pointer my-20 w-full sm:w-1/4 py-3 bg-foreground text-white rounded-4xl hover:bg-secondary transition-colors font-medium">
                     See more
                 </Link>
             </motion.div>

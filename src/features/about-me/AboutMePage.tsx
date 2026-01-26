@@ -17,11 +17,11 @@ export const AboutMePage = () => {
                         transition={{ duration: 0.4, ease: "easeOut" }}
                         className="w-full max-w-4xl"
                     >
-{/*                         <Link href="/">
+                        {/*                         <Link href="/">
                             <Image src="/icons/Back.svg" alt="Logo" width={30} height={30} />
                         </Link> */}
                         <div className="flex flex-col md:flex-row items-center gap-10 mb-16">
-                            <div className="w-40 h-40 sm:w-52 sm:h-52 rounded-full bg-snow-white overflow-hidden shrink-0">
+  {/*                           <div className="w-40 h-40 sm:w-52 sm:h-52 rounded-full bg-snow-white overflow-hidden shrink-0">
                                 <Image
                                     src="/icons/logo.svg"
                                     alt="Profile"
@@ -29,7 +29,7 @@ export const AboutMePage = () => {
                                     height={208}
                                     className="w-full h-full object-cover"
                                 />
-                            </div>
+                            </div> */}
                             <div className="text-center md:text-left">
                                 <h1 className="text-3xl sm:text-4xl font-semibold mb-2">
                                     About Me
@@ -38,7 +38,9 @@ export const AboutMePage = () => {
                                     Full Stack Developer
                                 </p>
                                 <p className="text-foreground leading-relaxed">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+                                    I’m a full stack developer who enjoys building clean, scalable, and user-focused web applications. I work across the entire stack, from intuitive interfaces to well-structured backend systems. 
+                                    <br /> <br />
+                                    I’m especially interested in projects that connect software with real-world data, such as IoT platforms and data visualization tools. I focus on clarity, maintainability, and turning complex information into simple, useful experiences.
                                 </p>
                             </div>
                         </div>
@@ -60,13 +62,11 @@ export const AboutMePage = () => {
                         <section className="mb-16">
                             <h2 className="text-2xl font-semibold mb-6">Background</h2>
                             <p className="text-foreground leading-relaxed mb-4">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nunc id aliquam tincidunt, nisl nunc tincidunt nunc, vitae aliquam nunc nunc vitae nunc.
-                            </p>
-                            <p className="text-foreground leading-relaxed">
-                                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+                                My background is in modern full stack development, with hands-on experience using frameworks like Next.js and feature-based, layered architectures. One of my key projects, aquaQA, is an IoT-driven application for monitoring and visualizing water quality data.
+                                <br /> <br />
+                                Through projects like this, I’ve developed a strong interest in data-driven interfaces, real-time systems, and clean system design. I enjoy building products that are both technically solid and meaningful to users.
                             </p>
                         </section>
-
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
                             <Link
                                 href="/contact-me"
@@ -75,7 +75,7 @@ export const AboutMePage = () => {
                                 Get in Touch
                             </Link>
                             <Link
-                                href="/"
+                                href="/projects"
                                 className="px-8 py-3 border border-foreground text-foreground font-semibold rounded-full hover:bg-secondary hover:text-white hover:border-secondary transition-colors text-center"
                             >
                                 View My Work

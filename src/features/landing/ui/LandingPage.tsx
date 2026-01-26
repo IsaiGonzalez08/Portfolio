@@ -8,6 +8,7 @@ import WorkSection from "features/landing/ui/components/WorkSection";
 import Footer from "shared/components/ui/Footer";
 import Image from "next/image";
 import Link from "next/link";
+import SkillsSection from "features/landing/ui/components/SkillsSection";
 
 export const LandingPage = () => {
   return (
@@ -37,7 +38,7 @@ export const LandingPage = () => {
             <div className="flex items-center w-full gap-4 mt-14">
               <div className="w-20 h-px bg-foreground"></div>
               {listIcons.map((item, index) => (
-                <Link href={item.href} key={index}>
+                <Link href={item.href} key={index} target="_blank">
                   <Image
                     src={item.icon}
                     alt={item.name}
@@ -53,6 +54,7 @@ export const LandingPage = () => {
       </div>
       <ExperienceSection />
       <WorkSection />
+      <SkillsSection />
       <Footer />
     </>
   )

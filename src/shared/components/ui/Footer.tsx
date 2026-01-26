@@ -3,21 +3,23 @@ import Link from "next/link";
 
 export const Footer = () => {
 
+    const email = "your@email.com";
+
     const footerSections = [
         {
             title: "Navigations",
             items: [
                 {
                     name: "Projects",
-                    url: ""
+                    url: "/projects"
                 },
                 {
                     name: "About me",
-                    url: ""
+                    url: "/about-me"
                 },
                 {
                     name: "Contact",
-                    url: ""
+                    url: "/contact-me"
                 }
             ]
         },
@@ -26,7 +28,7 @@ export const Footer = () => {
             items: [
                 {
                     name: "Email",
-                    url: ""
+                    url: `mailto:${email}?subject=Contact%20from%20Portfolio&body=Hi%2C%0A%0AI'm%20contacting%20you%20from%20your%20portfolio.%0A%0A`
                 },
                 {
                     name: "LinkedIn",

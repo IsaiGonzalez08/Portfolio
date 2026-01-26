@@ -1,9 +1,9 @@
 import { companyItem, iconItem, WorkCard } from "@/features/landing/domain/types";
 
 export const listIcons = [
-    { name: "LinkedIn", icon: "/icons/LinkedIn.svg", href: "#" },
-    { name: "GitHub", icon: "/icons/GitHub.svg", href: "#" },
-    { name: "Dribbble", icon: "/icons/Dribbble.svg", href: "#" },
+    { name: "LinkedIn", icon: "/icons/LinkedIn.svg", href: "https://www.linkedin.com/in/gerardo-isa%C3%AD-gonz%C3%A1lez-ruiz-b02b6b224/" },
+    { name: "GitHub", icon: "/icons/GitHub.svg", href: "https://github.com/IsaiGonzalez08" },
+    { name: "Dribbble", icon: "/icons/Dribbble.svg", href: "https://dribbble.com/isaigonza" },
 ] as iconItem[];
 
 export const listCompanies = [
@@ -73,4 +73,38 @@ export const workCardsList = [
         year: "2023",
         images: ["/icons/mainCoin.png"]
     }
-] as WorkCard[]; 
+] as WorkCard[];
+
+export const skillCategories = [
+    {
+        category: "Frontend",
+        skills: ["React", "Next.js", "Vue.js", "Svelte", "TypeScript", "Tailwind CSS"]
+    },
+    {
+        category: "Backend",
+        skills: ["Node.js", "Express", "PostgreSQL", "MongoDB", "REST APIs"]
+    },
+    {
+        category: "Mobile",
+        skills: ["Flutter", "React Native", "Dart"]
+    },
+    {
+        category: "Tools",
+        skills: ["Git", "Docker", "Figma", "VS Code"]
+    }
+];
+
+export const certificates = [
+    {
+        title: "Coursera / Google UX Design",
+        issuer: "Google",
+        date: "2024",
+        image: "/icons/coursera.svg"
+    },
+    {
+        title: "Coursera / Front-End Developer Professional",
+        issuer: "Meta",
+        date: "2023",
+        image: "/icons/coursera.svg"
+    }
+]; 

@@ -13,7 +13,7 @@ const SkillsSection = () => {
                 <h1 className="text-foreground font-bold text-4xl sm:text-5xl">Skills</h1>
             </motion.div>
             <div className="flex flex-col gap-14 mt-10">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     {skillCategories.map((category, index) => (
                         <motion.div
                             key={index}
@@ -46,7 +46,7 @@ const SkillsSection = () => {
                     className="mt-10"
                 >
                     <h2 className="text-2xl font-semibold text-foreground mb-6">Certificates</h2>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 ">
+                    <div className="cursor-pointer grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 ">
                         {certificates.map((cert, index) => (
                             <motion.div
                                 key={index}

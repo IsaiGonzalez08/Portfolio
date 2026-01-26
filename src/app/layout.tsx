@@ -10,6 +10,13 @@ const montserrat = Montserrat({
 export const metadata: Metadata = {
   title: "Gerardo González",
   description: "Gerardo's González Portfolio",
+  openGraph: {
+    title: "Gerardo González",
+    description: "Gerardo's González Portfolio",
+  },
+  icons: {
+    icon: "/icons/logo.svg",
+  },
 };
 
 export default function RootLayout({

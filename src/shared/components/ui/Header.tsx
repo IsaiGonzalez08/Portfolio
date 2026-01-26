@@ -20,7 +20,9 @@ const Header = () => {
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 0.5, delay: 0.3, ease: "easeOut" }}
                 viewport={{ once: true }} className="flex flex-row items-center justify-between w-full px-5 sm:px-10 lg:px-20">
-                <Image src="/icons/logo.svg" alt="Logo" width={50} height={50} />
+                <Link href="/" className="cursor-pointer">
+                    <Image src="/icons/logo.svg" alt="Logo" width={50} height={50} />
+                </Link>
                 <div className="hidden sm:flex flex-row gap-14 font-medium">
                     <Link href="/" onClick={(e) => handleSmoothScroll(e, "work")}>Work</Link>
                     <Link href="/about" onClick={(e) => handleSmoothScroll(e, "experience")}>Experience</Link>

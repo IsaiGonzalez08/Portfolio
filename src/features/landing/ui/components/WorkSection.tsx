@@ -23,7 +23,7 @@ export const WorkSection = () => {
             <div className="flex flex-col gap-10">
                 {workCardsList.map((card, index) =>
                     <WorkCard
-                        key={index}
+                        key={card.id}
                         workCard={card}
                         bgColor={backgroundColors[index % backgroundColors.length]}
                     />
@@ -33,10 +33,10 @@ export const WorkSection = () => {
             <motion.div
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
-                transition={{ duration: 0.5, delay: 0.5, ease: "easeOut" }}
+                transition={{ duration: 0.5, delay: 0.2, ease: "easeOut" }}
                 viewport={{ once: true }}
                 className="flex justify-center w-full">
-                <Link href="/projects" className="text-center cursor-pointer my-20 w-full sm:w-1/4 py-3 bg-foreground text-white rounded-4xl hover:bg-secondary transition-colors">
+                <Link href="/projects" className="text-center cursor-pointer my-20 w-full sm:w-1/4 py-3 bg-foreground text-white rounded-4xl hover:bg-secondary transition-colors font-medium">
                     See more
                 </Link>
             </motion.div>

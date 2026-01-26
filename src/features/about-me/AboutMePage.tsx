@@ -21,7 +21,7 @@ export const AboutMePage = () => {
                             <Image src="/icons/Back.svg" alt="Logo" width={30} height={30} />
                         </Link> */}
                         <div className="flex flex-col md:flex-row items-center gap-10 mb-16">
-                            <div className="w-40 h-40 sm:w-52 sm:h-52 rounded-full bg-snow-white overflow-hidden shrink-0">
+  {/*                           <div className="w-40 h-40 sm:w-52 sm:h-52 rounded-full bg-snow-white overflow-hidden shrink-0">
                                 <Image
                                     src="/icons/logo.svg"
                                     alt="Profile"
@@ -29,7 +29,7 @@ export const AboutMePage = () => {
                                     height={208}
                                     className="w-full h-full object-cover"
                                 />
-                            </div>
+                            </div> */}
                             <div className="text-center md:text-left">
                                 <h1 className="text-3xl sm:text-4xl font-semibold mb-2">
                                     About Me

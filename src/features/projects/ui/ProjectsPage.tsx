@@ -1,9 +1,9 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { workCardsList } from "features/landing/ui/data";
 import Footer from "shared/components/ui/Footer";
 import WorkCard from "features/landing/ui/components/WorkCard";
-import { workCardsList } from "features/landing/ui/data";
 
 const backgroundColors = [
     "bg-gradient-to-br from-[#CDE9EB] to-[#E8F4F5]",

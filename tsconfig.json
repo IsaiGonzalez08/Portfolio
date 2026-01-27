@@ -20,7 +20,8 @@
     ],
     "paths": {
       "@/components/*": ["components/*"],
-      "@/features/*": ["features/*"]
+      "@/features/*": ["features/*"],
+      "@/server/*": ["server/*"]
     },
     "baseUrl": "src/"
   },

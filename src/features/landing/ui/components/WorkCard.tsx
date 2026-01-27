@@ -1,7 +1,7 @@
 import { WorkCard as WorkCardType } from "@/features/landing/domain/types";
 import { Chip } from "shared/components/ui/Chip";
-import Image from "next/image";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import Link from "next/link";
 
 export const WorkCard = ({ bgColor, workCard }: { bgColor?: string, workCard: WorkCardType }) => {

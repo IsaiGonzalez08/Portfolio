@@ -3,9 +3,8 @@ export type Project = {
     role: string;
     duration: string;
     overview: string;
-    stackId: string;
-    resultsId: string;
     participants: string[];
+    name: string;
     createdAt: Date;
     updatedAt: Date;
 }

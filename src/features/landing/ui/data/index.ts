@@ -1,4 +1,4 @@
-import { companyItem, iconItem, WorkCard } from "@/features/landing/domain/types";
+import { companyItem, iconItem, ItemStack, ProjectResult, WorkCard } from "@/features/landing/domain/types";
 
 export const listIcons = [
     { name: "LinkedIn", icon: "/icons/LinkedIn.svg", href: "https://www.linkedin.com/in/gerardo-isa%C3%AD-gonz%C3%A1lez-ruiz-b02b6b224/" },
@@ -53,7 +53,7 @@ export const listCompanies = [
 
 export const workCardsList = [
     {
-        id: "cmkwsren70000qoth18x30seo",
+        id: "cmkwwfbk90000koth29sq7oja",
         type: "Web Development",
         projectName: "AquaQA",
         description: "Website to monitor water quality using an IoT.",
@@ -110,4 +110,36 @@ export const certificates = [
         date: "2023",
         image: "/icons/coursera.svg"
     }
-]; 
+];
+
+export const stackFromProjects = [
+    {
+        id: "cmkwwfbk90000koth29sq7oja",
+        name: "AquaQA",
+        icons: ["/icons/Flutter.svg", "/icons/Firebase.svg", "/icons/GoogleMaps.svg"]
+    },
+    {
+        id: "rabbitgo",
+        name: "RabbitGO",
+        icons: ["/icons/Flutter.svg", "/icons/Firebase.svg", "/icons/GoogleMaps.svg"]
+    },
+    {
+        id: "maincoin",
+        name: "MainCoin",
+        icons: ["/icons/Flutter.svg", "/icons/Firebase.svg", "/icons/GoogleMaps.svg"]
+    }
+] as ItemStack[]
+
+export const projectsResults = [
+    {
+        id: "cmkwwfbk90000koth29sq7oja",
+        name: "AquaQA",
+        results: [
+            {
+                title: "Interactive Map",
+                description: "We gave the user a way to interact the routes, buse’s stops and geolocation with a intuitive map by Google Maps.",
+                image: "/gifts/aquaQA-demo.gif"
+            }
+        ]
+    }
+] as ProjectResult[]

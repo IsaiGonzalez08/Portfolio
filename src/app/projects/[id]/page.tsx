@@ -1,5 +1,13 @@
+"use client";
+
+import { use } from "react";
 import SingleProject from "@/features/projects/ui/SingleProject";
 
-export default function SingleProjectPage() {
-  return <SingleProject />;
+type PageProps = {
+  params: Promise<{ id: string }>;
+};
+
+export default function SingleProjectPage({ params }: PageProps) {
+  const { id } = use(params);
+  return <SingleProject id={id} />;
 }

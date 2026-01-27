@@ -19,9 +19,9 @@ export async function GET() {
 export async function POST(request: Request) {
   try {
     const body = await request.json();
-    const { role, duration, overview, stackId, resultsId, participants } = body;
+    const { role, duration, overview, participants, name } = body;
 
-    if (!role || !duration || !overview) {
+    if (!role || !duration || !overview || !name) {
       return NextResponse.json(
         { error: "Missing required fields" },
         { status: 400 }
@@ -33,9 +33,8 @@ export async function POST(request: Request) {
         role,
         duration,
         overview,
-        stackId,
-        resultsId,
         participants,
+        name,
       },
     });
 

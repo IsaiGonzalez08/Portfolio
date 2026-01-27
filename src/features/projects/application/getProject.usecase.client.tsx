@@ -1,5 +1,5 @@
 import { Project } from "../domain/Project";
-import { getProjectById } from "../services/authHttp.service";
+import { getProjectById } from "../services/projectHttp.service";
 
 
 export async function getProjectUseCase(id: string): Promise<Project> {

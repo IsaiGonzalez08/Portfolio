@@ -53,7 +53,7 @@ export const listCompanies = [
 
 export const workCardsList = [
     {
-        id: "cmkwonbie0000isth1ge6pzqy",
+        id: "cmkwsren70000qoth18x30seo",
         type: "Web Development",
         projectName: "AquaQA",
         description: "Website to monitor water quality using an IoT.",

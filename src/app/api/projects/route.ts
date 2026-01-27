@@ -1,11 +1,10 @@
 import { NextResponse } from "next/server";
 import { prisma } from "@/server/db/prisma";
+import { getAllProjectsUseCaseServer } from "@/features/projects/application/getAllProjects.usecase.server";
 
 export async function GET() {
   try {
-    const projects = await prisma.project.findMany({
-      orderBy: { createdAt: "desc" },
-    });
+    const projects = await getAllProjectsUseCaseServer();
 
     return NextResponse.json(projects, { status: 200 });
   } catch (error) {

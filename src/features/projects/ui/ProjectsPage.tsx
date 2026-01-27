@@ -2,6 +2,9 @@
 
 import { motion } from "framer-motion";
 import { workCardsList } from "features/landing/ui/data";
+import { useEffect, useState } from "react";
+import { getAllProjectsUseCase } from "../application/getAllProjects.usecase.client";
+import { Project } from "../domain/Project";
 import Footer from "shared/components/ui/Footer";
 import WorkCard from "features/landing/ui/components/WorkCard";
 
@@ -12,6 +15,16 @@ const backgroundColors = [
 ];
 
 export const ProjectsPage = () => {
+
+    const [projects, setProjects] = useState<Project[]>([]);
+
+    useEffect(() => {
+        const fetchProjects = getAllProjectsUseCase();
+        fetchProjects.then((projects) => {
+            setProjects(projects);
+        });
+    }, []);
+
     return (
         <>
             <div className="min-h-dvh pb-10">

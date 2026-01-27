@@ -19,7 +19,17 @@ model Project {
   role      String
   duration  String
   overview  String
-  participants String[]
+  participants Participant[]
+  link String
+  github String
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
+}
+
+model Participant {
+  id String @id @default(cuid())
+  name String
+  lastName String
+  linkedin String
+  projects Project[]
 }

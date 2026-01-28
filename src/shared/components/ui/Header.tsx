@@ -24,8 +24,8 @@ const Header = () => {
                     <Image src="/icons/logo.svg" alt="Logo" width={50} height={50} />
                 </Link>
                 <div className="hidden sm:flex flex-row gap-14 font-medium">
-                    <Link href="/" onClick={(e) => handleSmoothScroll(e, "work")}>Work</Link>
                     <Link href="/about" onClick={(e) => handleSmoothScroll(e, "experience")}>Experience</Link>
+                    <Link href="/" onClick={(e) => handleSmoothScroll(e, "work")}>Work</Link>
                     <Link href="/contact" onClick={(e) => handleSmoothScroll(e, "skills")}>Skills</Link>
                 </div>
                 <Link href="/about-me" className="bg-foreground font-medium hover:bg-secondary transition-colors cursor-pointer rounded-full text-white py-2 px-6">

@@ -19,17 +19,29 @@ model Project {
   role      String
   duration  String
   overview  String
-  participants Participant[]
-  link String
-  github String
+  link      String
+  github    String
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
+
+  participants ProjectParticipant[]
 }
 
 model Participant {
-  id String @id @default(cuid())
-  name String
+  id       String @id @default(cuid())
+  name     String
   lastName String
   linkedin String
-  projects Project[]
+
+  projects ProjectParticipant[]
+}
+
+model ProjectParticipant {
+  projectId     String
+  participantId String
+
+  project     Project     @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  participant Participant @relation(fields: [participantId], references: [id], onDelete: Cascade)
+
+  @@id([projectId, participantId])
 }

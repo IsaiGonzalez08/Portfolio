@@ -59,13 +59,13 @@ export const Footer = () => {
     return (
         <footer className="w-full flex flex-col border-t border-secondary rounded-4xl p-5 sm:p-10">
             <div className="flex flex-col justify-center items-center sm:flex-row w-full gap-5">
-                <div className="flex flex-col items-center xl:flex-row sm:items-start gap-5 w-full sm:w-1/2">
+                <div className="flex flex-col items-center xl:flex-row sm:items-start gap-5 w-full sm:w-2/5 lg:w-1/2">
                     <Link href="/" className="w-10 h-10">
                         <Image src="/icons/logo.svg" alt="logo" width={40} height={40} />
                     </Link>
                     <p className="text-secondary text-sm text-center sm:text-left">Developer with 3 years of experience in the design, installation, and maintenance of software systems.</p>
                 </div>
-                <div className="flex gap-6 sm:w-1/2 sm:justify-start">
+                <div className="flex gap-6 sm:w-3/5 lg:w-1/2 sm:justify-end">
                     <div className="flex flex-row justify-around sm:justify-center gap-6 w-full sm:w-fit">
                         {footerSections.map((section, index) =>
                             <div key={index} className="flex flex-col">
@@ -94,7 +94,7 @@ export const Footer = () => {
                 </div>
             </div>
             <hr className="text-secondary w-full mt-5" />
-            <p className="text-center text-secondary mt-2">© Isaí González, 2025.</p>
+            <p className="text-center text-secondary mt-2">Made by Gerardo González, 2025.</p>
         </footer>
     )
 }

@@ -12,6 +12,7 @@ import {
 import Footer from "shared/components/ui/Footer";
 import Link from "next/link";
 import Image from "next/image";
+import { useEffect, useState } from "react";
 
 type Props = {
   id: string;
@@ -19,11 +20,43 @@ type Props = {
 
 const SingleProject = ({ id }: Props) => {
   const { projects } = useSelector((state: RootState) => state.projects);
-  const project = projects?.find((p: Project) => p.id === id);
-  const listIcons = stackFromProjects.find((p: ItemStack) => p.id === id);
+  const [persistedData, setPersistedData] = useState<{
+    project: Project | undefined;
+    listIcons: ItemStack | undefined;
+    projectResults: ProjectResult | undefined;
+  } | null>(null);
+
+  useEffect(() => {
+    const savedData = localStorage.getItem('currentProject');
+    if (savedData) {
+      const parsed = JSON.parse(savedData);
+      if (parsed.id === id) {
+        setPersistedData(parsed.data);
+      } else {
+        localStorage.removeItem('currentProject');
+      }
+    }
+  }, [id]);
+
+  const project = projects?.find((p: Project) => p.id === id) || persistedData?.project;
+  const listIcons = stackFromProjects.find((p: ItemStack) => p.id === id) || persistedData?.listIcons;
   const projectResults = projectsResults.find(
     (p: ProjectResult) => p.id === id,
-  );
+  ) || persistedData?.projectResults;
+
+  useEffect(() => {
+    if (project && listIcons && projectResults) {
+      const dataToSave = {
+        id,
+        data: {
+          project,
+          listIcons,
+          projectResults,
+        },
+      };
+      localStorage.setItem('currentProject', JSON.stringify(dataToSave));
+    }
+  }, [id, project, listIcons, projectResults]);
 
   const backgroundColors = [
     "bg-gradient-to-br from-[#CDE9EB] to-[#E8F4F5]",
@@ -39,7 +72,7 @@ const SingleProject = ({ id }: Props) => {
       <main className="min-h-dvh px-10 py-8">
         <div className="flex items-center gap-8">
           <Link href="/projects">
-            <Image src="/icons/Back.svg" alt="back" height={40} width={40} />
+            <Image src="/icons/Back.svg" alt="back" height={30} width={30} />
           </Link>
           <h1 className="text-5xl font-bold">{project?.name}</h1>
         </div>

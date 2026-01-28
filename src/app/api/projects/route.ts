@@ -11,7 +11,7 @@ export async function GET() {
     console.error("GET /api/projects error:", error);
     return NextResponse.json(
       { error: "Internal server error" },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }
@@ -24,7 +24,7 @@ export async function POST(request: Request) {
     if (!role || !duration || !overview || !name || !link || !github) {
       return NextResponse.json(
         { error: "Missing required fields" },
-        { status: 400 }
+        { status: 400 },
       );
     }
 
@@ -33,11 +33,15 @@ export async function POST(request: Request) {
         role,
         duration,
         overview,
-        participants,
         name,
         link,
         github,
-      },
+        participants: {
+          create: participants.map((participantId: string) => ({
+            participantId,
+          })),
+        },
+      }
     });
 
     return NextResponse.json(project, { status: 201 });
@@ -45,7 +49,7 @@ export async function POST(request: Request) {
     console.error("POST /api/projects error:", error);
     return NextResponse.json(
       { error: "Internal server error" },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }

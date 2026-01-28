@@ -27,22 +27,25 @@ const SingleProject = ({ id }: Props) => {
   } | null>(null);
 
   useEffect(() => {
-    const savedData = localStorage.getItem('currentProject');
+    const savedData = localStorage.getItem("currentProject");
     if (savedData) {
       const parsed = JSON.parse(savedData);
       if (parsed.id === id) {
         setPersistedData(parsed.data);
       } else {
-        localStorage.removeItem('currentProject');
+        localStorage.removeItem("currentProject");
       }
     }
   }, [id]);
 
-  const project = projects?.find((p: Project) => p.id === id) || persistedData?.project;
-  const listIcons = stackFromProjects.find((p: ItemStack) => p.id === id) || persistedData?.listIcons;
-  const projectResults = projectsResults.find(
-    (p: ProjectResult) => p.id === id,
-  ) || persistedData?.projectResults;
+  const project =
+    projects?.find((p: Project) => p.id === id) || persistedData?.project;
+  const listIcons =
+    stackFromProjects.find((p: ItemStack) => p.id === id) ||
+    persistedData?.listIcons;
+  const projectResults =
+    projectsResults.find((p: ProjectResult) => p.id === id) ||
+    persistedData?.projectResults;
 
   useEffect(() => {
     if (project && listIcons && projectResults) {
@@ -54,7 +57,7 @@ const SingleProject = ({ id }: Props) => {
           projectResults,
         },
       };
-      localStorage.setItem('currentProject', JSON.stringify(dataToSave));
+      localStorage.setItem("currentProject", JSON.stringify(dataToSave));
     }
   }, [id, project, listIcons, projectResults]);
 
@@ -71,23 +74,20 @@ const SingleProject = ({ id }: Props) => {
     <>
       <main className="min-h-dvh px-10 py-8">
         <div className="flex items-center gap-8">
-          <Link href="/projects">
-            <Image src="/icons/Back.svg" alt="back" height={30} width={30} />
-          </Link>
-          <h1 className="text-5xl font-bold">{project?.name}</h1>
+          <h1 className="text-4xl font-bold">{project?.name}</h1>
         </div>
 
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-5 w-full mt-5">
           <div className="flex flex-col w-full">
-            <p className="text-2xl font-normal">Role</p>
+            <p className="text-2xl font-medium">Role</p>
             <p className="text-secondary mt-2">{project?.role}</p>
           </div>
           <div className="flex flex-col w-full">
-            <p className="text-2xl font-normal">Duration</p>
+            <p className="text-2xl font-medium">Duration</p>
             <p className="text-secondary mt-2">{project?.duration}</p>
           </div>
           <div className="flex flex-col w-full">
-            <p className="text-2xl font-normal">Stack</p>
+            <p className="text-2xl font-medium">Stack</p>
             <div className="flex gap-2 mt-2">
               {listIcons?.icons.map((icon: string) => (
                 <img
@@ -103,7 +103,7 @@ const SingleProject = ({ id }: Props) => {
 
         <div className="flex flex-col lg:flex-row w-full mt-5">
           <div className="flex flex-col w-full lg:w-1/3">
-            <p className="text-2xl font-normal">Overview</p>
+            <p className="text-2xl font-medium">Overview</p>
           </div>
           <div className="flex flex-col w-full lg:w-2/3">
             <p className="text-secondary mt-2">{project?.overview}</p>
@@ -112,7 +112,7 @@ const SingleProject = ({ id }: Props) => {
 
         <div>
           <div className="flex items-center justify-between mt-5">
-            <p className="text-2xl font-normal">Results</p>
+            <p className="text-2xl font-medium">Results</p>
             <div className="flex gap-2 items-center">
               <Link
                 className="flex"
@@ -136,19 +136,20 @@ const SingleProject = ({ id }: Props) => {
               (result: ItemResult, index: number) => (
                 <div
                   key={result.title}
-                  className={`flex flex-col ${index % 2 === 0 ? "sm:flex-row " : "sm:flex-row-reverse"} gap-5 justify-center items-center w-full`}
+                  className={`flex flex-col ${index % 2 === 0 ? "sm:flex-row " : "sm:flex-row-reverse"} justify-center items-center w-full`}
                 >
-                  <div className="flex flex-col w-full lg:w-1/3">
-                    <p className="text-lg font-normal">{result.title}</p>
-                    <p className="text-secondary mt-2 text-sm">
+                  <div className={`flex flex-col w-full lg:w-1/3 ${index % 2 === 0 ? "" : "lg:pl-10"}`}>
+                    <p className="text-lg font-medium">{result.title}</p>
+                    <p className="text-secondary mt-2 text-sm w-4/5">
                       {result.description}
                     </p>
                   </div>
-                  <div className="flex flex-col w-full lg:w-2/3">
-                    <img
+                  <div className="relative flex flex-col w-full h-64 lg:w-2/3 mt-5 lg:mt-0 lg:h-96">
+                    <Image
                       className="rounded-xl"
                       src={result.image}
                       alt="result"
+                      fill
                     />
                   </div>
                 </div>

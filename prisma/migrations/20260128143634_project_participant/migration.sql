@@ -24,18 +24,15 @@ CREATE TABLE "Participant" (
 );
 
 -- CreateTable
-CREATE TABLE "_ParticipantToProject" (
-    "A" TEXT NOT NULL,
-    "B" TEXT NOT NULL,
+CREATE TABLE "ProjectParticipant" (
+    "projectId" TEXT NOT NULL,
+    "participantId" TEXT NOT NULL,
 
-    CONSTRAINT "_ParticipantToProject_AB_pkey" PRIMARY KEY ("A","B")
+    CONSTRAINT "ProjectParticipant_pkey" PRIMARY KEY ("projectId","participantId")
 );
 
--- CreateIndex
-CREATE INDEX "_ParticipantToProject_B_index" ON "_ParticipantToProject"("B");
+-- AddForeignKey
+ALTER TABLE "ProjectParticipant" ADD CONSTRAINT "ProjectParticipant_projectId_fkey" FOREIGN KEY ("projectId") REFERENCES "Project"("id") ON DELETE CASCADE ON UPDATE CASCADE;
 
 -- AddForeignKey
-ALTER TABLE "_ParticipantToProject" ADD CONSTRAINT "_ParticipantToProject_A_fkey" FOREIGN KEY ("A") REFERENCES "Participant"("id") ON DELETE CASCADE ON UPDATE CASCADE;
-
--- AddForeignKey
-ALTER TABLE "_ParticipantToProject" ADD CONSTRAINT "_ParticipantToProject_B_fkey" FOREIGN KEY ("B") REFERENCES "Project"("id") ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE "ProjectParticipant" ADD CONSTRAINT "ProjectParticipant_participantId_fkey" FOREIGN KEY ("participantId") REFERENCES "Participant"("id") ON DELETE CASCADE ON UPDATE CASCADE;

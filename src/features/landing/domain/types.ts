@@ -22,3 +22,22 @@ export interface WorkCard {
     year: string
     images: string[]
 }
+
+export interface ItemStack {
+    id: string
+    name: string
+    icons: string[]
+}
+
+export interface ProjectResult {
+    id: string;
+    name: string;
+    results: ItemResult[];
+}
+
+export interface ItemResult {
+    title: string;
+    description: string;
+    image: string;
+}
+

@@ -1,9 +1,12 @@
 import { NextResponse } from "next/server";
 import { getProjectUseCaseServer } from "@/features/projects/application/getProject.usecase.server";
 
-export async function GET({ params }: { params: { id: string } }) {
+export async function GET(
+  request: Request,
+  { params }: { params: Promise<{ id: string }> }
+) {
   try {
-    const { id } = params;
+    const { id } = await params;
     
     const project = await getProjectUseCaseServer(id);
 

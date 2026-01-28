@@ -23,7 +23,7 @@ export const WorkSection = () => {
             <div className="flex flex-col gap-10">
                 {workCardsList.map((card, index) =>
                     <WorkCard
-                        key={card.id}
+                        key={card.projectName}
                         workCard={card}
                         bgColor={backgroundColors[index % backgroundColors.length]}
                     />

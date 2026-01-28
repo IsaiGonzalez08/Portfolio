@@ -45,7 +45,7 @@ export const Footer = () => {
             url: "https://www.linkedin.com/in/gerardo-isa%C3%AD-gonz%C3%A1lez-ruiz-b02b6b224/"
         },
         {
-            icon: "/icons/Github.svg",
+            icon: "/icons/GitHub.svg",
             name: "GitHub",
             url: "https://github.com/gerardo-isa"
         },

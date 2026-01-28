@@ -1,17 +1,27 @@
 import { WorkCard as WorkCardType } from "@/features/landing/domain/types";
 import { Chip } from "shared/components/ui/Chip";
-import Image from "next/image";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import Link from "next/link";
 
 export const WorkCard = ({ bgColor, workCard }: { bgColor?: string, workCard: WorkCardType }) => {
+    const handleCardClick = () => {
+        const savedData = localStorage.getItem('currentProject');
+        if (savedData) {
+            const parsed = JSON.parse(savedData);
+            if (parsed.id !== workCard.id) {
+                localStorage.removeItem('currentProject');
+            }
+        }
+    };
+
     return (
         <motion.div className="flex flex-col gap-5 mt-5"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.5, ease: "easeOut" }}
             viewport={{ once: true }}>
-            <Link href={`/projects/${workCard.id}`} className="block">
+            <Link href={`/projects/${workCard.id}`} className="block" onClick={handleCardClick}>
                 <div className="flex flex-row justify-between">
                     <div className="flex flex-row items-center gap-5">
                         <h2 className="text-2xl font-bold">{workCard.projectName}</h2>
@@ -24,7 +34,7 @@ export const WorkCard = ({ bgColor, workCard }: { bgColor?: string, workCard: Wo
             </Link>
             <p className="text-foreground text-xl font-light">{workCard.description}</p>
             <Chip title={workCard.type} />
-            <Link href={`/projects/${workCard.id}`} className="block">
+            <Link href={`/projects/${workCard.id}`} className="block" onClick={handleCardClick}>
                 <motion.div
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}

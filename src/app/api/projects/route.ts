@@ -41,10 +41,22 @@ export async function POST(request: Request) {
             participantId,
           })),
         },
-      }
+      },
+      include: {
+        participants: {
+          include: {
+            participant: true,
+          },
+        },
+      },
     });
 
-    return NextResponse.json(project, { status: 201 });
+    const formattedProject = {
+      ...project,
+      participants: project.participants.map(p => p.participant),
+    };
+
+    return NextResponse.json(formattedProject, { status: 201 });
   } catch (error) {
     console.error("POST /api/projects error:", error);
     return NextResponse.json(

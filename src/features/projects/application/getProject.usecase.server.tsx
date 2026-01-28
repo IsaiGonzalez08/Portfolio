@@ -6,8 +6,8 @@ export async function getProjectUseCaseServer(id: string): Promise<Project> {
         where: { id },
         include: {
             participants: {
-                select: {
-                    participantId: true,
+                include: {
+                    participant: true,
                 },
             },
         },
@@ -17,6 +17,6 @@ export async function getProjectUseCaseServer(id: string): Promise<Project> {
     }
     return {
         ...project,
-        participants: project.participants.map(p => p.participantId),
+        participants: project.participants.map(p => p.participant),
     };
 }

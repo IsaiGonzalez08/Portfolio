@@ -74,7 +74,7 @@ export const listCompanies = [
 
 export const workCardsList = [
   {
-    id: "cmky5kf37000108thjrwcnsvz",
+    id: "cmkyie9330000c0thv7ugizap",
     type: "Web Development",
     projectName: "AquaQA",
     description: "Website to monitor water quality using an IoT.",
@@ -148,7 +148,7 @@ export const certificates = [
 
 export const stackFromProjects = [
   {
-    id: "cmky5kf37000108thjrwcnsvz",
+    id: "cmkyie9330000c0thv7ugizap",
     name: "AquaQA",
     icons: [
       "/icons/Flutter.svg",
@@ -178,7 +178,7 @@ export const stackFromProjects = [
 
 export const projectsResults = [
   {
-    id: "cmky5kf37000108thjrwcnsvz",
+    id: "cmkyie9330000c0thv7ugizap",
     name: "AquaQA",
     results: [
       {

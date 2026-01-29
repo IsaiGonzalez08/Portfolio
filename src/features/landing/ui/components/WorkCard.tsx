@@ -93,7 +93,7 @@ export const WorkCard = ({
             delay: index * 0.1 + 0.2,
             ease: "easeOut",
           }}
-          className={`relative cursor-pointer flex justify-center gap-10 h-full rounded-4xl p-10 ${bgColor}`}
+          className={`relative cursor-pointer flex justify-center gap-14 h-full rounded-4xl p-10 ${bgColor}`}
         >
           {workCard.images.slice(0, imagesToShow).map((imageSrc, imgIndex) => (
             <Image

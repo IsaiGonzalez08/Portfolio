@@ -172,7 +172,7 @@ const SingleProject = ({ id }: Props) => {
                 href={project?.github || "#"}
                 target="_blank"
               >
-                <img className="w-8 h-8" src="/icons/github.svg" alt="github" />
+                <img className="w-8 h-8" src="/icons/GitHub.svg" alt="github" />
               </Link>
             </div>
           </div>

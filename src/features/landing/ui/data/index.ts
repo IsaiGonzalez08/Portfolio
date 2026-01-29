@@ -82,7 +82,7 @@ export const workCardsList = [
     images: ["/gifts/aquaQA-demo.gif"],
   },
   {
-    id: "rabbitgo",
+    id: "cmkyie9330000c0thv7ugizap",
     type: "Mobile Application",
     projectName: "RabbitGO",
     description:
@@ -95,7 +95,7 @@ export const workCardsList = [
     ],
   },
   {
-    id: "maincoin",
+    id: "cmkyie9330000c0thv7ugizap",
     type: "Web Development",
     projectName: "MainCoin",
     description:
@@ -157,7 +157,7 @@ export const stackFromProjects = [
     ],
   },
   {
-    id: "rabbitgo",
+    id: "cmkyie9330000c0thv7ugizap",
     name: "RabbitGO",
     icons: [
       "/icons/Flutter.svg",
@@ -166,7 +166,7 @@ export const stackFromProjects = [
     ],
   },
   {
-    id: "maincoin",
+    id: "cmkyie9330000c0thv7ugizap",
     name: "MainCoin",
     icons: [
       "/icons/Flutter.svg",

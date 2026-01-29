@@ -91,6 +91,7 @@ export const workCardsList = [
     images: [
       "/icons/rabbitgo-1.png",
       "/icons/rabbitgo-2.png",
+      "/icons/rabbitgo-2.png",
     ],
   },
   {

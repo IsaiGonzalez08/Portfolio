@@ -35,6 +35,7 @@ export const ProjectsPage = () => {
                   key={card.id}
                   workCard={card}
                   bgColor={backgroundColors[index % backgroundColors.length]}
+                  index={index}
                 />
               ))}
             </div>

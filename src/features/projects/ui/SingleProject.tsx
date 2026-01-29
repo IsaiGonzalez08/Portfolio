@@ -62,14 +62,16 @@ const SingleProject = ({ id }: Props) => {
     }
   }, [id, project, listIcons, projectResults]);
 
-  const backgroundColors = [
-    "bg-gradient-to-br from-[#CDE9EB] to-[#E8F4F5]",
-    "bg-gradient-to-br from-[#8DA8C9] to-[#DFE6EF]",
-    "bg-gradient-to-br from-[#6E71A8] to-[#272727]",
-  ];
 
-  const bgColor =
-    backgroundColors[projects?.findIndex((p: Project) => p.id === id)];
+  if (!project) {
+    return (
+      <main className="min-h-dvh px-10 py-8">
+        <div className="flex items-center gap-8">
+          <h1 className="text-4xl font-bold">Project not found</h1>
+        </div>
+      </main>
+    );
+  }
 
   return (
     <>

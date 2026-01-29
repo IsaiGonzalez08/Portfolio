@@ -3,6 +3,7 @@ import { Chip } from "shared/components/ui/Chip";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import { useState, useEffect } from "react";
 
 export const WorkCard = ({
   bgColor,
@@ -13,6 +14,25 @@ export const WorkCard = ({
   workCard: WorkCardType;
   index?: number;
 }) => {
+  const [imagesToShow, setImagesToShow] = useState(1);
+
+  useEffect(() => {
+    const handleResize = () => {
+      const width = window.innerWidth;
+      if (width >= 1024) {
+        setImagesToShow(workCard.images.length);
+      } else if (width >= 768) {
+        setImagesToShow(Math.min(2, workCard.images.length));
+      } else {
+        setImagesToShow(1);
+      }
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, [workCard.images.length]);
+
   const handleCardClick = () => {
     const savedData = localStorage.getItem("currentProject");
     if (savedData) {
@@ -73,27 +93,24 @@ export const WorkCard = ({
             delay: index * 0.1 + 0.2,
             ease: "easeOut",
           }}
-          className={`relative cursor-pointer w-full h-120 flex justify-center items-center rounded-4xl p-10 overflow-hidden ${bgColor}`}
+          className={`relative cursor-pointer flex justify-center gap-14 h-full rounded-4xl p-10 ${bgColor}`}
         >
-          {workCard.images.map((imageSrc, index) => (
+          {workCard.images.slice(0, imagesToShow).map((imageSrc, imgIndex) => (
             <Image
-              key={index}
+              key={imgIndex}
               src={imageSrc}
-              alt="..."
-              width={1600}
-              height={1600}
-              sizes="(min-width: 1024px) 600px, 90vw"
-              quality={90}
-              unoptimized
+              width={700}
+              height={700}
+              alt={`${workCard.projectName} screenshot ${imgIndex + 1}`}
+              quality={95}
               className="
-    w-full
-    h-full
-    object-contain
-    transition-transform
-    duration-500
-    ease-out
-    group-hover:scale-125
-  "
+              object-contain
+              group-hover:scale-110 
+              transition-transform
+              duration-500
+              w-fit
+              h-100
+              max-h-100"
             />
           ))}
         </motion.div>

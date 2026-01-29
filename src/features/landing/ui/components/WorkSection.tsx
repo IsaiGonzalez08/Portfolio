@@ -20,7 +20,7 @@ export const WorkSection = () => {
                 viewport={{ once: true }}>
                 <h1 className="text-foreground font-bold text-4xl sm:text-5xl">Selected work</h1>
             </motion.div>
-            <div className="flex flex-col gap-10">
+            <div className="flex flex-col gap-10 lg:gap-20">
                 {workCardsList.map((card, index) =>
                     <WorkCard
                         key={card.projectName}

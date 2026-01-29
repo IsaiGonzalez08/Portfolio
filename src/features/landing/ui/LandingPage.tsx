@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { listIcons } from "./data";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { getAllProjectsUseCase } from "@/features/projects/application/getAllProjects.usecase.client";
 import { useDispatch } from "react-redux";
 import { setProjects } from "shared/store/projectSlice";
@@ -13,16 +13,27 @@ import Footer from "shared/components/ui/Footer";
 import Image from "next/image";
 import Link from "next/link";
 import SkillsSection from "features/landing/ui/components/SkillsSection";
+import { Project } from "@/features/projects/domain/Project";
 
 export const LandingPage = () => {
   const dispatch = useDispatch();
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
+    const savedProjects = localStorage.getItem("allProjects");
+    if (savedProjects) {
+      const parsedProjects = JSON.parse(savedProjects);
+      dispatch(setProjects(parsedProjects));
+      setIsLoading(false);
+    }
+
     const fetchProjects = getAllProjectsUseCase();
-    fetchProjects.then((projects) => {
+    fetchProjects.then((projects: Project[]) => {
       dispatch(setProjects(projects));
+      localStorage.setItem("allProjects", JSON.stringify(projects));
+      setIsLoading(false);
     });
-  }, []);
+  }, [dispatch]);
 
   return (
     <>

@@ -68,24 +68,32 @@ export const WorkCard = ({
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 0.5, delay: index * 0.1 + 0.2, ease: "easeOut" }}
-          className={`cursor-pointer w-full flex justify-center items-center rounded-4xl p-10 overflow-hidden ${bgColor}`}
+          transition={{
+            duration: 0.5,
+            delay: index * 0.1 + 0.2,
+            ease: "easeOut",
+          }}
+          className={`relative cursor-pointer w-full h-120 flex justify-center items-center rounded-4xl p-10 overflow-hidden ${bgColor}`}
         >
           {workCard.images.map((imageSrc, index) => (
             <Image
               key={index}
               src={imageSrc}
-              alt={`${workCard.projectName}-${index}`}
-              width={620}
-              height={600}
-              priority={index === 0}
+              alt="..."
+              width={1600}
+              height={1600}
+              sizes="(min-width: 1024px) 600px, 90vw"
+              quality={90}
+              unoptimized
               className="
-          rounded-4xl
-          transition-transform
-          duration-500
-          ease-out
-          group-hover:scale-125
-        "
+    w-full
+    h-full
+    object-contain
+    transition-transform
+    duration-500
+    ease-out
+    group-hover:scale-125
+  "
             />
           ))}
         </motion.div>

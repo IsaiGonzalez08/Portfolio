@@ -29,7 +29,7 @@ export const ProjectsPage = () => {
               A collection of my work and side projects.
             </p>
 
-            <div className="flex flex-col gap-10">
+            <div className="flex flex-col gap-20">
               {workCardsList.map((card, index) => (
                 <WorkCard
                   key={card.id}

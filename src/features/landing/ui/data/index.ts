@@ -99,7 +99,7 @@ export const workCardsList = [
     type: "Web Development",
     projectName: "MainCoin",
     description:
-      "Application that gives information about public transport service.",
+      "Interactive course platform that allows setting objectives and granting rewards, such as products based on Web3 technology",
     year: "2023",
     images: ["/icons/mainCoin.png"],
   },

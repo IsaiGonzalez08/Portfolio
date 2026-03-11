@@ -14,10 +14,12 @@ const ExperienceSection = () => {
             </motion.div>
             <div className="flex flex-col gap-14 mt-10">
                 {listCompanies.map((company, index) =>
-                    <motion.div initial={{ opacity: 0 }}
+                    <motion.div 
+                        initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }}
-                        transition={{ duration: 0.5, delay: 0.5, ease: "easeOut" }}
-                        viewport={{ once: true }} key={index}
+                        transition={{ duration: 0.5, delay: 0.9, ease: "easeOut" }}
+                        viewport={{ once: true }} 
+                        key={index}
                         className="flex flex-col gap-4 border-b border-secondary pb-8">
                         <div className="flex flex-row justify-between items-start">
                             <div className="flex flex-col gap-4">

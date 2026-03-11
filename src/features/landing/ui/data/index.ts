@@ -79,7 +79,7 @@ export const workCardsList = [
     projectName: "AquaQA",
     description: "Website to monitor water quality using an IoT.",
     year: "2025",
-    images: ["/gifts/aquaQA-demo.gif"],
+    images: ["/videos/aquaQA-demo.mp4"],
   },
   {
     id: "rabbitGO",
@@ -99,7 +99,7 @@ export const workCardsList = [
     type: "Web Development",
     projectName: "MainCoin",
     description:
-      "Application that gives information about public transport service.",
+      "Interactive course platform that allows setting objectives and granting rewards, such as products based on Web3 technology",
     year: "2023",
     images: ["/icons/mainCoin.png"],
   },
@@ -185,19 +185,19 @@ export const projectsResults = [
         title: "Smart water monitoring",
         description:
           "AquaQA monitors water quality in real time through an IoT system that integrates key sensors such as temperature, pH, turbidity and magnetism,",
-        image: "/gifts/IoT-video.gif",
+        image: "/videos/aqua-water-demo.mp4",
       },
       {
         title: "Intuitive information display",
         description:
           "The data collected is displayed through dashboards and interactive graphics, designed so that any user can understand without the need for technical knowledge.",
-        image: "/gifts/IoT-video.gif",
+        image: "/videos/aqua-water-demo.mp4",
       },
       {
         title: "Scalable and modular architecture",
         description:
           "The application is built with a full stack architecture in Next.js based on features and layers (UI, Application, Services and Domain), which facilitates maintenance, scalability and the incorporation of new functionalities.",
-        image: "/gifts/IoT-video.gif",
+        image: "/videos/aqua-water-demo.mp4",
       },
     ],
   },

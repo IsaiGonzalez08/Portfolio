@@ -43,12 +43,18 @@ export const WorkCard = ({
     }
   };
 
+  const isVideo = (src: string) => {
+    const videoExtensions = ['.mp4', '.webm', '.ogg', '.mov'];
+    return videoExtensions.some(ext => src.toLowerCase().endsWith(ext));
+  };
+
   return (
     <motion.div
       className="flex flex-col gap-5 mt-5 group cursor-pointer"
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5, delay: index * 0.1, ease: "easeOut" }}
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 0.5, delay: 0.3, ease: "easeOut" }}
+      viewport={{ once: true }}
     >
       <Link
         href={`/projects/${workCard.id}`}
@@ -87,32 +93,56 @@ export const WorkCard = ({
       >
         <motion.div
           initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
+          whileInView={{ opacity: 1 }}
           transition={{
             duration: 0.5,
-            delay: index * 0.1 + 0.2,
+            delay: 0.2,
             ease: "easeOut",
           }}
+          viewport={{ once: true, amount: 0.2 }}
           className={`relative cursor-pointer flex justify-center gap-14 h-full rounded-4xl p-10 ${bgColor}`}
         >
-          {workCard.images.slice(0, imagesToShow).map((imageSrc, imgIndex) => (
-            <Image
-              key={imgIndex}
-              src={imageSrc}
-              width={700}
-              height={700}
-              alt={`${workCard.projectName} screenshot ${imgIndex + 1}`}
-              quality={95}
-              className="
-              object-contain
-              group-hover:scale-110 
-              transition-transform
-              duration-500
-              w-fit
-              h-100
-              max-h-100"
-            />
-          ))}
+          {workCard.images.slice(0, imagesToShow).map((imageSrc, imgIndex) => {
+            if (isVideo(imageSrc)) {
+              return (
+                <video
+                  key={imgIndex}
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  className="
+                  object-contain
+                  group-hover:scale-110 
+                  transition-transform
+                  duration-500
+                  w-fit
+                  h-100
+                  max-h-100"
+                >
+                  <source src={imageSrc} type="video/mp4" />
+                </video>
+              );
+            }
+            return (
+              <Image
+                key={imgIndex}
+                src={imageSrc}
+                width={700}
+                height={700}
+                alt={`${workCard.projectName} screenshot ${imgIndex + 1}`}
+                quality={95}
+                className="
+                object-contain
+                group-hover:scale-110 
+                transition-transform
+                duration-500
+                w-fit
+                h-100
+                max-h-100"
+              />
+            );
+          })}
         </motion.div>
       </Link>
     </motion.div>

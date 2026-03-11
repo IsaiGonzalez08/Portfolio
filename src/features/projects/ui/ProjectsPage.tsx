@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { workCardsList } from "features/landing/ui/data";
+import { workCardsList } from "./data";
 import Footer from "shared/components/ui/Footer";
 import WorkCard from "features/landing/ui/components/WorkCard";
 
@@ -9,6 +9,7 @@ const backgroundColors = [
   "bg-gradient-to-br from-[#CDE9EB] to-[#E8F4F5]",
   "bg-gradient-to-br from-[#8DA8C9] to-[#DFE6EF]",
   "bg-gradient-to-br from-[#6E71A8] to-[#272727]",
+  "bg-gradient-to-br from-[#4E75FF] to-[#E7EAF4]",
 ];
 
 export const ProjectsPage = () => {

@@ -3,7 +3,7 @@
 import { useSelector } from "react-redux";
 import { RootState } from "shared/store/store";
 import { Project, Participant } from "@/features/projects/domain/Project";
-import { stackFromProjects, projectsResults } from "@/features/landing/ui/data";
+import { stackFromProjects, projectsResults } from "@/features/projects/ui/data";
 import { useEffect, useState } from "react";
 import { motion, Variants } from "framer-motion";
 import {

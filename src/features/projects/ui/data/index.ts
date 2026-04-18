@@ -47,9 +47,9 @@ export const stackFromProjects = [
     id: "cmkyie9330000c0thv7ugizap",
     name: "AquaQA",
     icons: [
-      "/icons/Flutter.svg",
-      "/icons/Firebase.svg",
-      "/icons/GoogleMaps.svg",
+      "/icons/Next.js.svg",
+      "/icons/Prisma.svg",
+      "/icons/PostgreSQL.svg",
     ],
   },
   {
@@ -65,9 +65,7 @@ export const stackFromProjects = [
     id: "mainCoin",
     name: "MainCoin",
     icons: [
-      "/icons/Flutter.svg",
-      "/icons/Firebase.svg",
-      "/icons/GoogleMaps.svg",
+      "/icons/React.svg",
     ],
   },
 ] as ItemStack[];
@@ -87,13 +85,13 @@ export const projectsResults = [
         title: "Intuitive information display",
         description:
           "The data collected is displayed through dashboards and interactive graphics, designed so that any user can understand without the need for technical knowledge.",
-        image: "/videos/aqua-water-demo.mp4",
+        image: "/videos/AquaQA_Dashboard.mp4",
       },
       {
         title: "Scalable and modular architecture",
         description:
           "The application is built with a full stack architecture in Next.js based on features and layers (UI, Application, Services and Domain), which facilitates maintenance, scalability and the incorporation of new functionalities.",
-        image: "/videos/aqua-water-demo.mp4",
+        image: "/icons/architecture-diagram.svg",
       },
     ],
   },

@@ -3,7 +3,7 @@
 import { useSelector } from "react-redux";
 import { RootState } from "shared/store/store";
 import { Project, Participant } from "@/features/projects/domain/Project";
-import { stackFromProjects, projectsResults } from "@/features/landing/ui/data";
+import { stackFromProjects, projectsResults } from "@/features/projects/ui/data";
 import { useEffect, useState } from "react";
 import { motion, Variants } from "framer-motion";
 import {
@@ -282,22 +282,31 @@ const SingleProject = ({ id }: Props) => {
                 transition={{ duration: 0.4 }}
                 className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-center"
               >
-                {/* Video */}
+                {/* Media (Video or Image) */}
                 <div className="w-full lg:w-2/3 order-1 lg:order-2">
                   <div className="relative rounded-2xl overflow-hidden border border-snow-white shadow-sm hover:shadow-md transition-shadow">
-                    <video
-                      className="w-full aspect-video object-cover"
-                      autoPlay
-                      loop
-                      muted
-                      playsInline
-                      key={projectResults.results[activeResultIndex].image}
-                    >
-                      <source
+                    {projectResults.results[activeResultIndex].image.endsWith(".mp4") ? (
+                      <video
+                        className="w-full aspect-video object-cover"
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        key={projectResults.results[activeResultIndex].image}
+                      >
+                        <source
+                          src={projectResults.results[activeResultIndex].image}
+                          type="video/mp4"
+                        />
+                      </video>
+                    ) : (
+                      <img
+                        className="w-full aspect-video object-contain bg-white"
                         src={projectResults.results[activeResultIndex].image}
-                        type="video/mp4"
+                        alt={projectResults.results[activeResultIndex].title}
+                        key={projectResults.results[activeResultIndex].image}
                       />
-                    </video>
+                    )}
                   </div>
                 </div>
 

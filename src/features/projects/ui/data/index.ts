@@ -1,4 +1,4 @@
-import { WorkCard } from "@/features/landing/domain/types";
+import { ItemStack, ProjectResult, WorkCard } from "@/features/landing/domain/types";
 
 export const workCardsList = [
   {
@@ -41,3 +41,58 @@ export const workCardsList = [
     images: ["/icons/dreamSafe-1.png"],
   },
 ] as WorkCard[];
+
+export const stackFromProjects = [
+  {
+    id: "cmkyie9330000c0thv7ugizap",
+    name: "AquaQA",
+    icons: [
+      "/icons/Next.js.svg",
+      "/icons/Prisma.svg",
+      "/icons/PostgreSQL.svg",
+    ],
+  },
+  {
+    id: "rabbitGO",
+    name: "RabbitGO",
+    icons: [
+      "/icons/Flutter.svg",
+      "/icons/Firebase.svg",
+      "/icons/GoogleMaps.svg",
+    ],
+  },
+  {
+    id: "mainCoin",
+    name: "MainCoin",
+    icons: [
+      "/icons/React.svg",
+    ],
+  },
+] as ItemStack[];
+
+export const projectsResults = [
+  {
+    id: "cmkyie9330000c0thv7ugizap",
+    name: "AquaQA",
+    results: [
+      {
+        title: "Smart water monitoring",
+        description:
+          "AquaQA monitors water quality in real time through an IoT system that integrates key sensors such as temperature, pH, turbidity and magnetism,",
+        image: "/videos/aqua-water-demo.mp4",
+      },
+      {
+        title: "Intuitive information display",
+        description:
+          "The data collected is displayed through dashboards and interactive graphics, designed so that any user can understand without the need for technical knowledge.",
+        image: "/videos/AquaQA_Dashboard.mp4",
+      },
+      {
+        title: "Scalable and modular architecture",
+        description:
+          "The application is built with a full stack architecture in Next.js based on features and layers (UI, Application, Services and Domain), which facilitates maintenance, scalability and the incorporation of new functionalities.",
+        image: "/icons/architecture-diagram.svg",
+      },
+    ],
+  },
+] as ProjectResult[];

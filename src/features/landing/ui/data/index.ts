@@ -1,8 +1,6 @@
 import {
   companyItem,
   iconItem,
-  ItemStack,
-  ProjectResult,
   WorkCard,
 } from "@/features/landing/domain/types";
 
@@ -27,7 +25,7 @@ export const listIcons = [
 export const listCompanies = [
   {
     name: "Pixzelle Studio",
-    role: "Front-end Developer",
+    role: "Full Stack Developer",
     date: "August 2023 - Currently",
     description:
       "Development of interactive web pages using frameworks such as Vue, Svelte and Next.js and maintenance of cross-platform applications with Flutter.",
@@ -42,7 +40,7 @@ export const listCompanies = [
   },
   {
     name: "Vara Network",
-    role: "Web Developer",
+    role: "Front-End Developer",
     date: "January/2023 - April/2023",
     description:
       "Leading front-end website development and involved in website design.",
@@ -57,7 +55,7 @@ export const listCompanies = [
   },
   {
     name: "Dsoft",
-    role: "Intership Web Developer",
+    role: "Internship Front-End Developer",
     date: "April/2022 - August/2022",
     description:
       "Participation in web development implementation of new features in internal projects and troubleshooting in production systems.",
@@ -145,60 +143,3 @@ export const certificates = [
     image: "/icons/coursera.svg",
   },
 ];
-
-export const stackFromProjects = [
-  {
-    id: "cmkyie9330000c0thv7ugizap",
-    name: "AquaQA",
-    icons: [
-      "/icons/Flutter.svg",
-      "/icons/Firebase.svg",
-      "/icons/GoogleMaps.svg",
-    ],
-  },
-  {
-    id: "rabbitGO",
-    name: "RabbitGO",
-    icons: [
-      "/icons/Flutter.svg",
-      "/icons/Firebase.svg",
-      "/icons/GoogleMaps.svg",
-    ],
-  },
-  {
-    id: "mainCoin",
-    name: "MainCoin",
-    icons: [
-      "/icons/Flutter.svg",
-      "/icons/Firebase.svg",
-      "/icons/GoogleMaps.svg",
-    ],
-  },
-] as ItemStack[];
-
-export const projectsResults = [
-  {
-    id: "cmkyie9330000c0thv7ugizap",
-    name: "AquaQA",
-    results: [
-      {
-        title: "Smart water monitoring",
-        description:
-          "AquaQA monitors water quality in real time through an IoT system that integrates key sensors such as temperature, pH, turbidity and magnetism,",
-        image: "/videos/aqua-water-demo.mp4",
-      },
-      {
-        title: "Intuitive information display",
-        description:
-          "The data collected is displayed through dashboards and interactive graphics, designed so that any user can understand without the need for technical knowledge.",
-        image: "/videos/aqua-water-demo.mp4",
-      },
-      {
-        title: "Scalable and modular architecture",
-        description:
-          "The application is built with a full stack architecture in Next.js based on features and layers (UI, Application, Services and Domain), which facilitates maintenance, scalability and the incorporation of new functionalities.",
-        image: "/videos/aqua-water-demo.mp4",
-      },
-    ],
-  },
-] as ProjectResult[];
